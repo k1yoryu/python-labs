@@ -1,4 +1,3 @@
-
 P = float(input("Давление (Па): "))
 V = float(input("Объем (м^3): "))
 T = float(input("Температура (К): "))

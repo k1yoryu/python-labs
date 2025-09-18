@@ -1,3 +1,4 @@
+
 password = input("Введите пароль: ")
 if not password:
     print("Пустая строка!")

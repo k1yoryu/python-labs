@@ -1,3 +1,4 @@
+#
 stroka = input("Введите строку: ")
 
 if not stroka:

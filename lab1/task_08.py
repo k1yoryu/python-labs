@@ -1,3 +1,4 @@
+
 text = input("Введите строку: ")
 if not text:
     print("Пустая строка!")

@@ -12,4 +12,4 @@ while otvet != random_chislo:
     elif otvet > random_chislo:
         print("Меньше")
     else:
-        print("Угадал!")
+        print("Угадал! Загаданное число: ", random_chislo)

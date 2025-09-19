@@ -32,16 +32,3 @@ itogo_bez_naloga = tarif_minutes + stoimost_minuti + stoimost_smski + stoimost_t
 nalog = itogo_bez_naloga * nalog
 
 itogo = itogo_bez_naloga + nalog
-
-print("Счет за месяц:")
-print("Базовая стоимость тарифа: {:.2f} руб.".format(tarif_price))
-
-if dopoln_minuti > 0:
-    print("Дополнительные минуты: {} мин. — {:.2f} руб.".format(dopoln_minuti, stoimost_minuti))
-if dopoln_smski > 0:
-    print("Дополнительные SMS: {} шт. — {:.2f} руб.".format(dopoln_smski, stoimost_smski))
-if dopoln_trafik > 0:
-    print("Дополнительный интернет: {} МБ — {:.2f} руб.".format(dopoln_trafik, stoimost_trafik))
-
-print("Налог (2%): {:.2f} руб.".format(nalog))
-print("Итоговая сумма к оплате: {:.2f} руб.".format(itogo))

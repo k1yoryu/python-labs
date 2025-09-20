@@ -41,5 +41,6 @@ else:
         print("Знак зодиака: Стрелец")
     elif (month == 12 and day >= 22) or (month == 1 and day <= 19):
         print("Знак зодиака: Козерог")
+
     else:
         print("Некорректная дата")

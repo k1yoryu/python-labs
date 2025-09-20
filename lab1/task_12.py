@@ -46,3 +46,31 @@ if dopoln_trafik > 0:
 print("Налог: " + str(round(summa_naloga, 2)) + " руб.")
 print("Всего к оплате: " + str(round(itogo, 2)) + " руб.")
 
+if dopoln_minuti < 0:
+    dopoln_minuti = 0
+if dopoln_smski < 0:
+    dopoln_smski = 0
+if dopoln_trafik < 0:
+    dopoln_trafik = 0
+
+stoimost_minuti = dopoln_minuti * minute_price
+stoimost_smski = dopoln_smski * sms_price
+stoimost_trafik = dopoln_trafik * mb_price
+
+itogo_bez_naloga = tarif_price + stoimost_minuti + stoimost_smski + stoimost_trafik
+summa_naloga = itogo_bez_naloga * nalog
+itogo = itogo_bez_naloga + summa_naloga
+
+print("Тариф: " + str(round(tarif_price, 2)) + " руб.")
+
+if dopoln_minuti > 0:
+    print("Минут сверх тарифа: " + str(dopoln_minuti) + " шт, доплата " + str(round(stoimost_minuti, 2)) + " руб.")
+
+if dopoln_smski > 0:
+    print("SMS сверх тарифа: " + str(dopoln_smski) + " шт, доплата " + str(round(stoimost_smski, 2)) + " руб.")
+
+if dopoln_trafik > 0:
+    print("Интернет сверх тарифа: " + str(dopoln_trafik) + " МБ, доплата " + str(round(stoimost_trafik, 2)) + " руб.")
+
+print("Налог: " + str(round(summa_naloga, 2)) + " руб.")
+print("Всего к оплате: " + str(round(itogo, 2)) + " руб.")
